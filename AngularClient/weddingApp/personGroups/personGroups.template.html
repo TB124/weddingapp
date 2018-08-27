@@ -1,0 +1,35 @@
+﻿<div class="jumbotron text-center">
+    <h1>PersonGroups</h1>
+</div>
+<div class="container" style="padding-bottom: 15px;">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary" ng-click="vm.addPersonGroup()">Add personGroup</button>
+        <table datatable="ng" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Gift</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="personGroup in vm.personGroups">
+                    <td>{{personGroup.id}}</td>
+                    <td>{{personGroup.name}}</td>
+                    <td>{{personGroup.gift}}</td>
+                    <td>{{personGroup.description}}</td>
+                    <td>
+                        <button class="btn btn-danger" type="button" ng-click="vm.deletePersonGroup(personGroup.id)">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-warning" type="button" ng-click="vm.editPersonGroup(personGroup)">
+                            <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

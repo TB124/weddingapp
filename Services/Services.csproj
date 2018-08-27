@@ -39,10 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\MovieService.cs" />
-    <Compile Include="Interface\IMovieService.cs" />
+    <Compile Include="Implementation\PersonGroupService.cs" />
+    <Compile Include="Implementation\PersonService.cs" />
+    <Compile Include="Implementation\TableService.cs" />
+    <Compile Include="Interface\IPersonGroupService.cs" />
+    <Compile Include="Interface\IPersonService.cs" />
+    <Compile Include="Interface\ITableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceModels\MovieModel.cs" />
+    <Compile Include="ServiceModels\PersonGroupModel.cs" />
+    <Compile Include="ServiceModels\PersonModel.cs" />
+    <Compile Include="ServiceModels\TableModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ambient.Context\Ambient.Context.csproj">
