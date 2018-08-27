@@ -85,7 +85,7 @@
       <DependentUpon>201808271621296_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="WeddingDbContext.cs" />
+    <Compile Include="WeddingAppDbContext.cs" />
     <Compile Include="Entities\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
