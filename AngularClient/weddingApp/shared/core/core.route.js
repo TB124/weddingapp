@@ -16,7 +16,7 @@
                 state: '404',
                 config: {
                     url: '/404',
-                    templateUrl: '/demoApp/shared/core/404.template.html',
+                    templateUrl: '/weddingApp/shared/core/404.template.html',
                     title: '404'
                 }
             },
@@ -24,7 +24,7 @@
                 state: 'private',
                 config: {                    
                     abstract: true,                    
-                    templateUrl: '/demoApp/shared/core/private.layout.template.html',
+                    templateUrl: '/weddingApp/shared/core/private.layout.template.html',
                     resolve: {
                         auth: ["$q", '$state', "AuthenticationService", "session", function ($q, $state, AuthenticationService, session) {
 
@@ -48,7 +48,7 @@
                  state: 'public',
                  config: {
                      abstract: true,                    
-                     templateUrl: '/demoApp/shared/core/public.layout.template.html',
+                     templateUrl: '/weddingApp/shared/core/public.layout.template.html',
                      resolve: {
                          auth: ["$q", function ($q) {
                              //console.log('public');                             

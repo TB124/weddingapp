@@ -20,7 +20,7 @@
                     title: 'Movies',
                     views: {
                         'main-content': {
-                            templateUrl: 'demoApp/movies/movies.template.html',
+                            templateUrl: 'weddingApp/movies/movies.template.html',
                             controller: 'MoviesController',
                             controllerAs: 'vm'
                         }

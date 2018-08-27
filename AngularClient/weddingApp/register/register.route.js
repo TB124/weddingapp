@@ -20,7 +20,7 @@
                     title: 'Register',
                     views: {
                         'public-view': {
-                            templateUrl: 'demoApp/register/register.template.html',
+                            templateUrl: 'weddingApp/register/register.template.html',
                             controller: 'RegisterController',
                             controllerAs: 'vm'
                         }

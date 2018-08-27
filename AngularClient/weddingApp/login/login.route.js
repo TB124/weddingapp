@@ -23,7 +23,7 @@
                     },
                     views: {
                         'public-view': {
-                            templateUrl: '/demoApp/login/login.template.html',
+                            templateUrl: '/weddingApp/login/login.template.html',
                             controller: 'LoginController',
                             controllerAs: 'vm'
                         }

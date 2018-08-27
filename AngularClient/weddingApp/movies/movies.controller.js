@@ -3,15 +3,15 @@
 
     angular.module('app.movies').controller('MoviesController', MoviesController);
 
-    MoviesController.$inject = ['$scope', '$uibModal', 'DemoAppService']
+    MoviesController.$inject = ['$scope', '$uibModal', 'weddingAppService']
 
-    function MoviesController($scope, $uibModal, DemoAppService) {
+    function MoviesController($scope, $uibModal, weddingAppService) {
 
         var vm = this;
         vm.movies = [];
 
         vm.getMovies = function () {
-            DemoAppService.getMoviesData().then(function (response) {
+            weddingAppService.getMoviesData().then(function (response) {
                 vm.movies = response.data;
             });
         }
@@ -22,7 +22,7 @@
         vm.openDialog = function (movie, title) {
 
             var modalInstance = $uibModal.open({
-                templateUrl: 'demoApp/movies/dialog/movieDialog.template.html',
+                templateUrl: 'weddingApp/movies/dialog/movieDialog.template.html',
                 controller: 'MovieDialogController',
                 controllerAs: 'vm',
                 size: 'lg',
@@ -52,7 +52,7 @@
         }
 
         vm.deleteMovie = function (movieId) {
-            DemoAppService.deleteMovie(movieId).then(function (response) {
+            weddingAppService.deleteMovie(movieId).then(function (response) {
                 vm.getMovies();
             });
 

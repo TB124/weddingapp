@@ -2,19 +2,18 @@
     'use strict';
 
 
-    angular.module('demoApp', [
+    angular.module('weddingApp', [
         'app.core',
         'app.landing',
         'app.register',
         'app.login',
         'app.home',
         'app.movies',
-        'app.bootstrapTutorial',
         'app.directives'
     ]);
 
 
-    angular.bootstrap(document, ['demoApp']);
+    angular.bootstrap(document, ['weddingApp']);
 
 
 })();

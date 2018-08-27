@@ -19,7 +19,7 @@
                 state: 'domain',
                 config: {
                     parent: 'public',                    
-                    templateUrl: '/demoApp/landing/landing.template.html',
+                    templateUrl: '/weddingApp/landing/landing.template.html',
                     title: 'Home',
                 }
             },
@@ -31,7 +31,7 @@
                     title: 'Home',
                     views: {
                         'public-view': {
-                            templateUrl: '/demoApp/landing/landing.template.html',
+                            templateUrl: '/weddingApp/landing/landing.template.html',
                             controller: 'LandingController',
                             controllerAs: 'vm',
                         }
@@ -46,7 +46,7 @@
                     title: 'Home',
                     views: {
                         'public-view': {
-                            templateUrl: '/demoApp/landing/landing.template.html',
+                            templateUrl: '/weddingApp/landing/landing.template.html',
                             controller: 'LandingController',
                             controllerAs: 'vm',
                         }

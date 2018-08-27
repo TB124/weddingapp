@@ -1,4 +1,4 @@
-﻿angular.module('app.movies').controller('MovieDialogController', function ($uibModalInstance, DemoAppService, movie, title) {
+﻿angular.module('app.movies').controller('MovieDialogController', function ($uibModalInstance, weddingAppService, movie, title) {
     var vm = this;
 
     vm.title = title;
@@ -6,12 +6,12 @@
 
     vm.save = function () {
         if (vm.movie.id == undefined) {
-            DemoAppService.addNewMovie(vm.movie).then(function (response) {
+            weddingAppService.addNewMovie(vm.movie).then(function (response) {
                 $uibModalInstance.close({ response: response });
             });
         }
         else {
-            DemoAppService.updateMovie(vm.movie).then(function (response) {
+            weddingAppService.updateMovie(vm.movie).then(function (response) {
                 $uibModalInstance.close({response: response});
             });
         }

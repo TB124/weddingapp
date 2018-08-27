@@ -20,7 +20,7 @@
                     title: 'Home',
                     views: {
                         'main-content': {
-                            templateUrl: 'demoApp/home/home.template.html',
+                            templateUrl: 'weddingApp/home/home.template.html',
                             controller: 'HomeController',
                             controllerAs: 'vm'
                         }
