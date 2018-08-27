@@ -9,6 +9,7 @@
         'app.login',
         'app.home',
         'app.movies',
+        'app.tables',
         'app.directives'
     ]);
 

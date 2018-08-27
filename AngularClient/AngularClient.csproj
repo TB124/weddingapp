@@ -82,6 +82,13 @@
     <Content Include="weddingApp\shared\core\core.config.js" />
     <Content Include="weddingApp\shared\core\core.constants.js" />
     <Content Include="weddingApp\shared\core\core.module.js" />
+    <Content Include="weddingApp\shared\services\table.service.js" />
+    <Content Include="weddingApp\tables\dialog\tableDialog.controller.js" />
+    <Content Include="weddingApp\tables\dialog\tableDialog.template.html" />
+    <Content Include="weddingApp\tables\tables.controller.js" />
+    <Content Include="weddingApp\tables\tables.module.js" />
+    <Content Include="weddingApp\tables\tables.route.js" />
+    <Content Include="weddingApp\tables\tables.template.html" />
     <Content Include="weddingApp\weddingApp.js" />
     <Content Include="weddingApp\home\home.controller.js" />
     <Content Include="weddingApp\home\home.template.html" />
@@ -117,7 +124,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="weddingApp\personGroups\" />
+    <Folder Include="weddingApp\persons\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

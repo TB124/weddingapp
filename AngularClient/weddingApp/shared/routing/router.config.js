@@ -16,11 +16,11 @@
                 controller: 'MoviesController as vm'
             })
 
-            // route for the contact page
-            .when('/bootstrapTutorial', {
-                templateUrl: 'weddingApp/bootstrapTutorial/bootstrapTutorial.template.html',
-                controller: 'BootstrapTutorialController'
-            });
+            // route for the table page
+            .when('/tables', {
+                templateUrl: 'weddingApp/tables/tables.template.html',
+                controller: 'TablesController as vm'
+            })
     })
 
 
