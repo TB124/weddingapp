@@ -8,9 +8,9 @@ using Infrastructure.Interface;
 
 namespace Context
 {
-    public class WeddingDbContext : DbContext
+    public class WeddingAppDbContext : DbContext
     {
-        public WeddingDbContext()
+        public WeddingAppDbContext()
             : base("WeddingDB")
         {
             Configuration.ProxyCreationEnabled = false;

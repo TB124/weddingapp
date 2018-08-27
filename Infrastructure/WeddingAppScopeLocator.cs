@@ -5,11 +5,11 @@ using Context;
 
 namespace Infrastructure
 {
-    public class MoviesScopeLocator : AmbientDbContextLocator, IAmbientDbContextLocator
+    public class WeddingAppScopeLocator : AmbientDbContextLocator, IAmbientDbContextLocator
     {
         public new DbContext Get()
         {
-            return base.Get<WeddingDbContext>();
+            return base.Get<WeddingAppDbContext>();
         }
     }
 

@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\MovieRepository.cs" />
-    <Compile Include="Implementation\MovieTypeRepository.cs" />
-    <Compile Include="Interface\IMovieRepository.cs" />
-    <Compile Include="Interface\IMovieTypeRepository.cs" />
+    <Compile Include="Implementation\PersonGroupRepository.cs" />
+    <Compile Include="Implementation\PersonRepository.cs" />
+    <Compile Include="Implementation\TableRepository.cs" />
+    <Compile Include="Interface\IPersonGroupRepository.cs" />
+    <Compile Include="Interface\IPersonRepository.cs" />
+    <Compile Include="Interface\ITableRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

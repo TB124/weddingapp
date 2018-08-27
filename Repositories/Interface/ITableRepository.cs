@@ -4,7 +4,7 @@ using Infrastructure.Interface;
 
 namespace Repositories.Interface
 {
-    public interface IMovieRepository : IGenericRepository<Movie>
+    public interface ITableRepository : IGenericRepository<Table>
     {
     }
 }

@@ -5,10 +5,10 @@ using Repositories.Interface;
 
 namespace Repositories.Implementation
 {
-    public class MovieRepository : GenericRepository<Movie>, IMovieRepository
+    public class TableRepository : GenericRepository<Table>, ITableRepository
     {
-        
-        public MovieRepository(IAmbientDbContextLocator ambientDbContextLocator ) : base(ambientDbContextLocator)
+
+        public TableRepository(IAmbientDbContextLocator ambientDbContextLocator) : base(ambientDbContextLocator)
         {
         }
     }
