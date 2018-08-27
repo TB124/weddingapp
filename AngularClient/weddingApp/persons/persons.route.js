@@ -1,27 +1,27 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app.movies')
-        .run(movieRoute);
+    angular.module('app.persons')
+        .run(personRoute);
 
-    movieRoute.$inject = ['routerHelper'];
+    personRoute.$inject = ['routerHelper'];
 
-    function movieRoute(routerHelper) {
+    function personRoute(routerHelper) {
         routerHelper.configureStates(getStates());
     }
 
     function getStates() {
         return [
             {
-                state: 'movies',
+                state: 'persons',
                 config: {
-                    url: '/movies',
+                    url: '/persons',
                     parent: 'private',
-                    title: 'Movies',
+                    title: 'Persons',
                     views: {
                         'main-content': {
-                            templateUrl: 'weddingApp/movies/movies.template.html',
-                            controller: 'MoviesController',
+                            templateUrl: 'weddingApp/persons/persons.template.html',
+                            controller: 'PersonsController',
                             controllerAs: 'vm'
                         }
                     }

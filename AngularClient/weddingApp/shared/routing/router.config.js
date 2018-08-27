@@ -10,16 +10,22 @@
                 controller: 'HomeController'
             })
 
-            // route for the about page
-            .when('/movies', {
-                templateUrl: 'weddingApp/movies/movies.template.html',
-                controller: 'MoviesController as vm'
-            })
-
             // route for the table page
             .when('/tables', {
                 templateUrl: 'weddingApp/tables/tables.template.html',
                 controller: 'TablesController as vm'
+            })
+
+            // route for the person page
+            .when('/persons', {
+                templateUrl: 'weddingApp/persons/persons.template.html',
+                controller: 'PersonsController as vm'
+            })
+
+            // route for the personGroup page
+            .when('/personGroups', {
+                templateUrl: 'weddingApp/personGroups/personGroups.template.html',
+                controller: 'PersonGroupsController as vm'
             })
     })
 

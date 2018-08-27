@@ -1,30 +1,34 @@
 ﻿<div class="jumbotron text-center">
-    <h1>Tables</h1>
+    <h1>Persons</h1>
 </div>
 <div class="container" style="padding-bottom: 15px;">
     <div class="col-md-12">
-        <button type="button" class="btn btn-primary" ng-click="vm.addTable()">Add table</button>
+        <button type="button" class="btn btn-primary" ng-click="vm.addPerson()">Add person</button>
         <table datatable="ng" class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Max Persons</th>
+                    <th>Table</th>
+                    <th>Group</th>
+                    <th>Gift</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="table in vm.tables">
-                    <td>{{table.id}}</td>
-                    <td>{{table.name}}</td>
-                    <td>{{table.max_Person}}</td>
-                    <td>{{table.description}}</td>
+                <tr ng-repeat="person in vm.persons">
+                    <td>{{person.id}}</td>
+                    <td>{{person.name}}</td>
+                    <td>{{person.tableId}}</td>
+                    <td>{{person.personGroupId}}</td>
+                    <td>{{person.gift}}</td>
+                    <td>{{person.description}}</td>
                     <td>
-                        <button class="btn btn-danger" type="button" ng-click="vm.deleteTable(table.id)">
+                        <button class="btn btn-danger" type="button" ng-click="vm.deletePerson(person.id)">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </button>
-                        <button class="btn btn-warning" type="button" ng-click="vm.editTable(table)">
+                        <button class="btn btn-warning" type="button" ng-click="vm.editPerson(person)">
                             <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
                         </button>
                     </td>
