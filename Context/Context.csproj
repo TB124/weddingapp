@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201808271621296_Initial.Designer.cs">
       <DependentUpon>201808271621296_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810052130316_added-nullable-fields-to-Persons.cs" />
+    <Compile Include="Migrations\201810052130316_added-nullable-fields-to-Persons.Designer.cs">
+      <DependentUpon>201810052130316_added-nullable-fields-to-Persons.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WeddingAppDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808271621296_Initial.resx">
       <DependentUpon>201808271621296_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052130316_added-nullable-fields-to-Persons.resx">
+      <DependentUpon>201810052130316_added-nullable-fields-to-Persons.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

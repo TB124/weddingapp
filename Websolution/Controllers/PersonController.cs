@@ -2,6 +2,7 @@
 using Services.Interface;
 using Services.ServiceModels;
 using Websolution.Controllers.Base;
+using Ambient.Context.Interfaces;
 
 namespace Websolution.Controllers
 {
@@ -10,50 +11,69 @@ namespace Websolution.Controllers
     public class PersonController : BaseApiController
     {
         private readonly IPersonService _personService;
+        private readonly IDbContextScopeFactory _contextScopeFactory;
 
-        public PersonController(IPersonService personService)
-        {
+        public PersonController(
+            IPersonService personService,
+            IDbContextScopeFactory contextScopeFactory
+        ) {
             _personService = personService;
+            _contextScopeFactory = contextScopeFactory;
         }
 
         [HttpGet]
         [Route("get")]
         public IHttpActionResult ReadAll()
         {
-            var persons = _personService.GetAll();
-            return Ok(persons);
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var persons = _personService.GetAll();
+                return Ok(persons);
+            }
         }
 
         [HttpGet]
         [Route("get/{id}")]
         public IHttpActionResult Read(int id)
         {
-            var person = _personService.GetById(id);
-            return Ok(person);
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var person = _personService.GetById(id);
+                return Ok(person);
+            }
         }
 
         [HttpPost]
         [Route("create")]
         public IHttpActionResult Create(PersonModel model)
         {
-            var person = _personService.Add(model);
-            return Ok(person);
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var person = _personService.Add(model);
+                return Ok(person);
+            }
         }
 
         [HttpPut]
         [Route("update")]
         public IHttpActionResult Update(PersonModel model)
         {
-            var person = _personService.Update(model);
-            return Ok(person);
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var person = _personService.Update(model);
+                return Ok(person);
+            }
         }
 
         [HttpDelete]
         [Route("delete")]
         public IHttpActionResult Delete(int id)
         {
-            _personService.Delete(id);
-            return Ok();
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                _personService.Delete(id);
+                return Ok();
+            }
         }
     }
 }

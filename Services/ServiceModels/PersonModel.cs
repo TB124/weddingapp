@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int TableId { get; set; }
+        public int? TableId { get; set; }
         public int PersonGroupId { get; set; }
         public int Gift { get; set; }
         public string Description { get; set; }

@@ -167,6 +167,7 @@
   <ItemGroup>
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\PersonGroupController.cs" />
+    <Compile Include="Controllers\SeatingController.cs" />
     <Compile Include="Controllers\TableController.cs" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />

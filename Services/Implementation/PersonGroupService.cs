@@ -28,57 +28,42 @@ namespace Services.Implementation
 
         public IEnumerable<PersonGroupModel> GetAll()
         {
-            using (var scope = _contextScopeFactory.CreateReadOnly())
-            {
-                var entities = _personGroupRepository.GetAllActive().ToList();
-                return _mapper.Map<List<PersonGroupModel>>(entities);
-            }
+            var entities = _personGroupRepository.GetAllActive().ToList();
+            return _mapper.Map<List<PersonGroupModel>>(entities);
         }
 
         public PersonGroupModel Add(PersonGroupModel model)
         {
-            using (var scope = _contextScopeFactory.Create())
-            {
-                var entity = _mapper.Map<PersonGroup>(model);
-                _personGroupRepository.Add(entity);
-                _personGroupRepository.Save();
-                return model;
-            }
+            var entity = _mapper.Map<PersonGroup>(model);
+            _personGroupRepository.Add(entity);
+            _personGroupRepository.Save();
+            return model;
         }
 
         public PersonGroupModel Update(PersonGroupModel model)
         {
-            using (var scope = _contextScopeFactory.Create())
-            {
-                var entity = _personGroupRepository.GetById(model.Id);
+            var entity = _personGroupRepository.GetById(model.Id);
 
-                entity.Name = model.Name;
-                entity.Gift = model.Gift;
-                entity.Description = model.Description;
+            entity.Name = model.Name;
+            entity.Gift = model.Gift;
+            entity.Description = model.Description;
 
-                _personGroupRepository.Edit(entity);
-                _personGroupRepository.Save();
+            _personGroupRepository.Edit(entity);
+            _personGroupRepository.Save();
 
-                return model;
-            }
+            return model;
         }
 
         public void Delete(int id)
         {
-            using (var scope = _contextScopeFactory.Create())
-            {
-                _personGroupRepository.Delete(id);
-                _personGroupRepository.Save();
-            }
+            _personGroupRepository.Delete(id);
+            _personGroupRepository.Save();
         }
 
         public PersonGroupModel GetById(int id)
         {
-            using (var scope = _contextScopeFactory.CreateReadOnly())
-            {
-                var entity = _personGroupRepository.GetById(id);
-                return _mapper.Map<PersonGroupModel>(entity);
-            }
+            var entity = _personGroupRepository.GetById(id);
+            return _mapper.Map<PersonGroupModel>(entity);
         }
     }
 }

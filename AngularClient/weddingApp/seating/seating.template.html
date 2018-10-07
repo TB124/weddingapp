@@ -1,0 +1,26 @@
+﻿<div class="jumbotron text-center">
+    <h1>Seating</h1>
+</div>
+<div class="container" style="padding-bottom: 15px;">
+    <div class="col-md-12">
+        <div class="col-md-4 div-box" ng-repeat="seating in vm.seatings">
+            <div class="row">
+                <div class="col-md-8">
+                    {{seating.table.name}}
+                </div>
+                <div class="col-md-3">
+                    Add new
+                </div>
+            </div>
+            <hr class="black-hr" />
+            <div class="row" ng-repeat="person in seating.persons">
+                <div class="col-md-8">
+                    {{person.name}}
+                </div>
+                <div class="col-md-3">
+                    Remove
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
