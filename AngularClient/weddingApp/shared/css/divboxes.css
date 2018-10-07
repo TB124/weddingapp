@@ -1,0 +1,27 @@
+﻿.div-box {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.black-hr {
+    border-color: black;
+    background-color: black;
+    color: black;
+}
+
+.data-container {
+    text-align: left;
+    /*max-height: 500px;*/
+    /*overflow: scroll;*/
+}
+
+.data-container > div {
+    padding: 10px
+}
+
+.data-container>div:hover {
+    background-color: lightgray;
+}
