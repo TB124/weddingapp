@@ -80,6 +80,10 @@
     <Content Include="weddingApp\register\register.module.js" />
     <Content Include="weddingApp\register\register.route.js" />
     <Content Include="weddingApp\register\register.template.html" />
+    <Content Include="weddingApp\seating\seating.controller.js" />
+    <Content Include="weddingApp\seating\seating.module.js" />
+    <Content Include="weddingApp\seating\seating.route.js" />
+    <Content Include="weddingApp\seating\seating.template.html" />
     <Content Include="weddingApp\shared\blocks\authentication\authentication.module.js" />
     <Content Include="weddingApp\shared\blocks\error\error.js" />
     <Content Include="weddingApp\shared\blocks\error\error.module.js" />
@@ -92,7 +96,9 @@
     <Content Include="weddingApp\shared\core\core.config.js" />
     <Content Include="weddingApp\shared\core\core.constants.js" />
     <Content Include="weddingApp\shared\core\core.module.js" />
+    <Content Include="weddingApp\shared\css\style.css" />
     <Content Include="weddingApp\shared\services\personGroup.service.js" />
+    <Content Include="weddingApp\shared\services\seating.service.js" />
     <Content Include="weddingApp\shared\services\table.service.js" />
     <Content Include="weddingApp\tables\dialog\tableDialog.controller.js" />
     <Content Include="weddingApp\tables\dialog\tableDialog.template.html" />
@@ -130,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="weddingApp\shared\css\divboxes.css" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

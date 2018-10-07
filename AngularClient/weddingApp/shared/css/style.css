@@ -1,0 +1,13 @@
+﻿.tabDesign {
+    margin-top: 1em;
+}
+
+li.active a.ng-binding {
+    color: #000;
+    text-decoration: none;
+}
+
+li a.ng-binding {
+    color: #777777;
+    text-decoration: none;
+}

@@ -1,7 +1,6 @@
 ﻿(function ready() {
     'use strict';
 
-
     angular.module('weddingApp', [
         'app.core',
         'app.landing',
@@ -10,12 +9,11 @@
         'app.home',
         'app.tables',
         'app.persons',
+        'app.seating',
         'app.personGroups',
         'app.directives'
     ]);
 
-
     angular.bootstrap(document, ['weddingApp']);
-
 
 })();
