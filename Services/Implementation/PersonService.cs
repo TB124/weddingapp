@@ -54,6 +54,10 @@ namespace Services.Implementation
         public PersonModel Add(PersonModel model)
         {
             var entity = _mapper.Map<Person>(model);
+            if (entity.PersonGroupId == 0)
+            {
+                entity.PersonGroupId = null;
+            }
             _personRepository.Add(entity);
             _personRepository.Save();
             return model;
@@ -66,7 +70,12 @@ namespace Services.Implementation
             entity.Name = model.Name;
             entity.TableId = model.TableId;
             entity.PersonGroupId = model.PersonGroupId;
+            if (entity.PersonGroupId == 0)
+            {
+                entity.PersonGroupId = null;
+            }
             entity.Gift = model.Gift;
+            entity.MenuType = model.MenuType;
             entity.Description = model.Description;
 
             _personRepository.Edit(entity);

@@ -12,6 +12,8 @@
 
         public int Gift { get; set; }
 
+        public string MenuType { get; set; }
+
         public string Description { get; set; }
     }
 }
