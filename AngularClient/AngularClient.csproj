@@ -80,6 +80,8 @@
     <Content Include="weddingApp\register\register.module.js" />
     <Content Include="weddingApp\register\register.route.js" />
     <Content Include="weddingApp\register\register.template.html" />
+    <Content Include="weddingApp\seating\dialog\addToTableDialog.controller.js" />
+    <Content Include="weddingApp\seating\dialog\addToTableDialog.template.html" />
     <Content Include="weddingApp\seating\seating.controller.js" />
     <Content Include="weddingApp\seating\seating.module.js" />
     <Content Include="weddingApp\seating\seating.route.js" />

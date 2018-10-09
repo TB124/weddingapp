@@ -17,6 +17,26 @@
                 return persons;
             });
         }
+        var getPersonsCount = function () {
+            return $http.get(serviceBase + 'api/person/getpersonscount', {
+                skipAuthorization: true
+            }).then(function (persons) {
+                return persons;
+            });
+        }
+        var getPersonsWithoutTableCount = function () {
+            return $http.get(serviceBase + 'api/person/getpersonswithouttablecount', {
+                skipAuthorization: true
+            }).then(function (persons) {
+                return persons;
+            });
+        }
+        var getAllWithoutTable = function () {
+            return $http.get(serviceBase + 'api/person/getallwithouttable')
+                .then(function (seating) {
+                    return seating;
+                });
+        }
         var addNewPerson = function (personModel) {
             return $http.post(serviceBase + 'api/person/create', personModel).then(function (newPerson) {
                 return newPerson;
@@ -34,6 +54,9 @@
         }
 
         PersonServiceFactory.getPersonsData = getPersonsData;
+        PersonServiceFactory.getAllWithoutTable = getAllWithoutTable;
+        PersonServiceFactory.getPersonsCount = getPersonsCount;
+        PersonServiceFactory.getPersonsWithoutTableCount = getPersonsWithoutTableCount;
         PersonServiceFactory.addNewPerson = addNewPerson;
         PersonServiceFactory.updatePerson = updatePerson;
         PersonServiceFactory.deletePerson = deletePerson;

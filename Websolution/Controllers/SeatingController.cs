@@ -31,7 +31,7 @@ namespace Websolution.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("removefromtable")]
         public IHttpActionResult RemovePersonFromTable(int personId)
         {
@@ -48,7 +48,7 @@ namespace Websolution.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("addtotable")]
         public IHttpActionResult AddPersonToTable(int personId, int tableId)
         {

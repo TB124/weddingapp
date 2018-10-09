@@ -29,6 +29,22 @@ namespace Services.Implementation
             return _mapper.Map<List<PersonModel>>(entities);
         }
 
+        public int GetPersonsCount()
+        {
+            return _personRepository.GetAllActive().Count();
+        }
+
+        public IEnumerable<PersonModel> GetAllWithoutTable()
+        {
+            var entities = _personRepository.GetAllActive().Where(x => x.TableId == null).ToList();
+            return _mapper.Map<List<PersonModel>>(entities);
+        }
+
+        public int GetPersonsWithoutTableCount()
+        {
+            return _personRepository.GetAllActive().Where(x => x.TableId == null).Count();
+        }
+
         public IEnumerable<PersonModel> GetAllFromTable(int tableId)
         {
             var entities = _personRepository.GetAllActive().Where(x => x.TableId == tableId).ToList();

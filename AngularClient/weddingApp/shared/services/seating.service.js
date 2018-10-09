@@ -16,8 +16,24 @@
                     return seating;
                 });
         }
+        var addToTable = function (personId, tableId) {
+            return $http.post(serviceBase + 'api/seating/addtotable?personId=' + personId + '&tableId=' + tableId).then(function () {
+                return true;
+            }, function (error) {
+                return false;
+            });
+        }
+        var removeFromTable = function (personId) {
+            return $http.post(serviceBase + 'api/seating/removefromtable?personId=' + personId).then(function () {
+                return true;
+            }, function (error) {
+                return false;
+            });
+        }
 
         SeatingServiceFactory.getSeatingData = getSeatingData;
+        SeatingServiceFactory.addToTable = addToTable;
+        SeatingServiceFactory.removeFromTable = removeFromTable;
 
         return SeatingServiceFactory;
     }

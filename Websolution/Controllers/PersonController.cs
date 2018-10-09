@@ -33,6 +33,28 @@ namespace Websolution.Controllers
         }
 
         [HttpGet]
+        [Route("getpersonscount")]
+        public IHttpActionResult GetPersonsCount()
+        {
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var persons = _personService.GetPersonsCount();
+                return Ok(persons);
+            }
+        }
+
+        [HttpGet]
+        [Route("getpersonswithouttablecount")]
+        public IHttpActionResult GetPersonsWithoutTableCount()
+        {
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var persons = _personService.GetPersonsWithoutTableCount();
+                return Ok(persons);
+            }
+        }
+
+        [HttpGet]
         [Route("get/{id}")]
         public IHttpActionResult Read(int id)
         {
@@ -40,6 +62,28 @@ namespace Websolution.Controllers
             {
                 var person = _personService.GetById(id);
                 return Ok(person);
+            }
+        }
+
+        [HttpGet]
+        [Route("getallfromtable/{tableId}")]
+        public IHttpActionResult GetAllFromTable(int tableId)
+        {
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var persons = _personService.GetAllFromTable(tableId);
+                return Ok(persons);
+            }
+        }
+
+        [HttpGet]
+        [Route("getallwithouttable")]
+        public IHttpActionResult GetAllWithoutTable()
+        {
+            using (var scope = _contextScopeFactory.CreateReadOnly())
+            {
+                var persons = _personService.GetAllWithoutTable();
+                return Ok(persons);
             }
         }
 

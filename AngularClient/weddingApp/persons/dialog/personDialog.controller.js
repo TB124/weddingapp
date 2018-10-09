@@ -1,4 +1,4 @@
-﻿angular.module('app.persons').controller('PersonDialogController', function ($uibModalInstance, PersonService, person, title, TableService, PersonGroupService) {
+﻿angular.module('app.persons').controller('PersonDialogController', function ($uibModalInstance, PersonService, TableService, PersonGroupService, person, title) {
     var vm = this;
     vm.tables = [];
     vm.personGroups = [];
